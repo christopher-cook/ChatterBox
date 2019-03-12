@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   fetchData = () => {
-    fetch('http://192.168.1.131:3000/fuzzys')
+    fetch('http://192.168.1.131:3000/chats')
       .then(data => data.json())
       .then(fuzzyData => {
         // this.showFuzzys(fuzzyData)

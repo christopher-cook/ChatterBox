@@ -6,8 +6,7 @@ class App extends Component {
     this.state = {
       name: '',
       age: '',
-      fav_color: '',
-      fuzzyArray:[]
+      fav_color: ''
     }
   }
 

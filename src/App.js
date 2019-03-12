@@ -11,11 +11,11 @@ class App extends Component {
   }
 
   fetchData = () => {
-    fetch('http://localhost:3000/fuzzys')
+    fetch('http://192.168.1.131:3000/fuzzys')
       .then(data => data.json())
       .then(fuzzyData => {
         // this.showFuzzys(fuzzyData)
-        console.log('working fetch');
+        console.log('fuzzyData);
       })
       .catch(err => console.log(err));
   }

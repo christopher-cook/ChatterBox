@@ -1,27 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
 class App extends Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      name: '',
+      age: '',
+      fav_color: '',
+      fuzzyArray:[]
+    }
+  }
+
+  fetchData = () => {
+    fetch('http://localhost:3000/fuzzys')
+      .then(data => data.json())
+      .then(fuzzyData => {
+        // this.showFuzzys(fuzzyData)
+        console.log('working fetch');
+      })
+      .catch(err => console.log(err));
+  }
+  componentDidMount() {
+    this.fetchData();
+  }
+  // showFuzzys = (fuzzys) => {
+  //   let fuzzyArray =[]
+  //   fuzzys.forEach((fuzzy) => {
+  //     fuzzyArray.push(fuzzy)
+  //   })
+  //   this.setFuzzys(fuzzyArray)
+  // }
+  // setFuzzys = (allSet) => {
+  //   this.setState({
+  //     fuzzyArray: allSet
+  //   })
+  // }
   render() {
+    console.log(fuzzyData);
+    console.log(data);
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+      <h1>Working React front-end</h1>
       </div>
-    );
+    )
   }
 }
 

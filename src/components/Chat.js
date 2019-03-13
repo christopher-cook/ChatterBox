@@ -4,6 +4,7 @@ class Chat extends Component {
   render() {
     return (
     <h4>Individual Chat called here</h4>
+    
     )
   }
 }

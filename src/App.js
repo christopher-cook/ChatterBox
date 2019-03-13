@@ -15,7 +15,7 @@ class App extends Component {
       .then(data => data.json())
       .then(fuzzyData => {
         // this.showFuzzys(fuzzyData)
-        console.log('fuzzyData);
+        console.log(fuzzyData);
       })
       .catch(err => console.log(err));
   }

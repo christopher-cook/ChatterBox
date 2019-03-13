@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   fetchData = () => {
-    fetch('http://192.168.1.131:3000/chats')
+    fetch('http://192.168.1.131:3000/chats') //working fetch address for server
       .then(response => response.json())
       .then(data => {
         this.showData(data)

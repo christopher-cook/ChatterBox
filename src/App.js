@@ -37,12 +37,14 @@ class App extends Component {
     })
   }
   render() {
+    console.log(this.props.convoArray);
+    console.log(this.state.convoArray);
     return (
-      <div>
+      <React.fragment>
         <h1>Working React front-end</h1>
         <Header />
         <ChatList />
-      </div>
+      </React.fragment>
     )
   }
 }

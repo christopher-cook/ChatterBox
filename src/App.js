@@ -14,31 +14,30 @@ class App extends Component {
     fetch('http://192.168.1.131:3000/chats')
       .then(data => data.json())
       .then(fuzzyData => {
-        this.showFuzzys(fuzzyData)
-        // console.log(fuzzyData);
+        // this.showFuzzys(fuzzyData)
+        console.log(fuzzyData);
       })
       .catch(err => console.log(err));
   }
   componentDidMount() {
     this.fetchData();
   }
-  showFuzzys = (fuzzys) => {
-    let fuzzyArray =[]
-    fuzzys.forEach((fuzzy) => {
-      fuzzyArray.push(fuzzy)
-    })
-    this.setFuzzys(fuzzyArray)
-  }
-  setFuzzys = (allSet) => {
-    this.setState({
-      fuzzyArray: allSet
-    })
-  }
+  // showFuzzys = (fuzzys) => {
+  //   let fuzzyArray =[]
+  //   fuzzys.forEach((fuzzy) => {
+  //     fuzzyArray.push(fuzzy)
+  //   })
+  //   this.setFuzzys(fuzzyArray)
+  // }
+  // setFuzzys = (allSet) => {
+  //   this.setState({
+  //     fuzzyArray: allSet
+  //   })
+  // }
   render() {
     return (
       <div>
       <h1>Working React front-end</h1>
-      {this.state.fuzzyData.name}
       </div>
     )
   }

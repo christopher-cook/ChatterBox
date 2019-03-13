@@ -42,7 +42,6 @@ class App extends Component {
         <h1>Working React front-end</h1>
         <Header />
         <ChatList />
-        <Chat />
       </div>
     )
   }

@@ -12,32 +12,40 @@ class App extends Component {
 
   fetchData = () => {
     fetch('http://192.168.1.131:3000/chats')
-      .then(data => data.json())
-      .then(fuzzyData => {
-        // this.showFuzzys(fuzzyData)
-        console.log(fuzzyData);
+      .then(response => response.json())
+      .then(data => {
+        this.showData(data)
       })
       .catch(err => console.log(err));
   }
   componentDidMount() {
     this.fetchData();
   }
-  // showFuzzys = (fuzzys) => {
-  //   let fuzzyArray =[]
-  //   fuzzys.forEach((fuzzy) => {
-  //     fuzzyArray.push(fuzzy)
-  //   })
-  //   this.setFuzzys(fuzzyArray)
-  // }
-  // setFuzzys = (allSet) => {
-  //   this.setState({
-  //     fuzzyArray: allSet
-  //   })
-  // }
+  showData = (convos) => {
+    let convoArray =[]
+    convos.forEach((convo) => {
+      convoArray.push(convo)
+    })
+    this.setData(convoArray)
+  }
+  setData = (allConvos) => {
+    this.setState({
+      convoArray: allConvos
+    })
+  }
   render() {
     return (
       <div>
-      <h1>Working React front-end</h1>
+        <h1>Working React front-end</h1>
+          {this.state.data.map(data => {
+            return (
+              <div>
+                <h2>{data.name}</h2>
+                <h3>{data.age}</h3>
+                <h3>{data.fav_color}</h3>
+              </div>
+            )
+          })}
       </div>
     )
   }

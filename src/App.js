@@ -34,11 +34,10 @@ class App extends Component {
     })
   }
   render() {
+    console.log(data);
     return (
       <div>
         <h1>Working React front-end</h1>
-        {this.state.data[0]["name"]}
-        {this.state.data[1]["age"]}
       </div>
     )
   }

@@ -35,7 +35,7 @@ class App extends Component {
     })
   }
   render() {
-    console.log(this.props.data);
+    console.log(data)
     return (
       <div>
         <h1>Working React front-end</h1>

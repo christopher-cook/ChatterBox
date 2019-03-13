@@ -37,15 +37,8 @@ class App extends Component {
     return (
       <div>
         <h1>Working React front-end</h1>
-          {this.state.data.map(data => {
-            return (
-              <div>
-                <h2>{data.name}</h2>
-                <h3>{data.age}</h3>
-                <h3>{data.fav_color}</h3>
-              </div>
-            )
-          })}
+        {data[0].name}
+        {data[1].age}
       </div>
     )
   }

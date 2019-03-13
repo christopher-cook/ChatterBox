@@ -37,8 +37,8 @@ class App extends Component {
     return (
       <div>
         <h1>Working React front-end</h1>
-        {data[0].name}
-        {data[1].age}
+        {this.state.data[0].name}
+        {this.state.data[1].age}
       </div>
     )
   }

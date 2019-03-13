@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ChatList from './components/ChatList.js';
-import Chat from './components/Chat.js';
+
 import Header from './components/Header.js';
 class App extends Component {
   constructor (props) {

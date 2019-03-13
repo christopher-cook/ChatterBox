@@ -14,7 +14,8 @@ class App extends Component {
     fetch('http://192.168.1.131:3000/chats') //working fetch address for server
       .then(response => response.json())
       .then(data => {
-        this.showData(data)
+        // this.showData(data)
+        console.log(data);
       })
       .catch(err => console.log(err));
   }
@@ -34,7 +35,6 @@ class App extends Component {
     })
   }
   render() {
-    console.log(data);
     return (
       <div>
         <h1>Working React front-end</h1>

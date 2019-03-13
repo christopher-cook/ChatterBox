@@ -37,7 +37,6 @@ class App extends Component {
     })
   }
   render() {
-    console.log(this.props.convoArray);
     console.log(this.state.convoArray);
     return (
       <div>

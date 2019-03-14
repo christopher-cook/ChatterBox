@@ -44,7 +44,7 @@ class App extends Component {
     return (
       <div>
         <h1>Working React front-end</h1>
-        {data.name}
+        {this.state.data.name}
         <Header />
         <ChatList />
       </div>

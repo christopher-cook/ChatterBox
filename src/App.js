@@ -8,7 +8,8 @@ class App extends Component {
     this.state = {
       name: '',
       age: '',
-      fav_color: ''
+      fav_color: '',
+      data: []
     }
   }
 
@@ -27,18 +28,18 @@ class App extends Component {
   componentDidMount() {
     this.fetchData();
   }
-  showData = (convos) => {
-    let convoArray =[]
-    convos.forEach((convo) => {
-      convoArray.push(convo)
-    })
-    this.setData(convoArray)
-  }
-  setData = (allConvos) => {
-    this.setState({
-      convoArray: allConvos
-    })
-  }
+  // showData = (convos) => {
+  //   let convoArray =[]
+  //   convos.forEach((convo) => {
+  //     convoArray.push(convo)
+  //   })
+  //   this.setData(convoArray)
+  // }
+  // setData = (allConvos) => {
+  //   this.setState({
+  //     convoArray: allConvos
+  //   })
+  // }
   render() {
     console.log(this.state.convoArray);
     return (

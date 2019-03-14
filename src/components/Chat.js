@@ -4,7 +4,10 @@ class Chat extends Component {
   render() {
     return (
       <div>
-    <h4>Individual Chat called here</h4>
+      {this.props.convo.name}<br />
+      {this.props.convo.age}<br />
+      {this.props.convo.fav_color}<br />
+
     </div>
     )
   }

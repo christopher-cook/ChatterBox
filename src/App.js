@@ -8,7 +8,8 @@ class App extends Component {
     this.state = {
       name: '',
       age: '',
-      fav_color: ''
+      fav_color: '',
+      convoArray: []
     }
   }
 
@@ -41,8 +42,9 @@ class App extends Component {
       <div>
         <h1>Working React frontend</h1>
         <Header />
-        <ChatList />
-        {this.state.convoArray}
+        <ChatList
+          convoArray={this.state.convoArray}
+        />
       </div>
     )
   }

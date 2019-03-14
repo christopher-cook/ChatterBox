@@ -41,7 +41,6 @@ class App extends Component {
   }
   render() {
     console.log(this.state.convoArray);
-    console.log(this.state.);
     return (
       <div>
         <h1>Working React front-end</h1>

@@ -5,7 +5,7 @@ class Chat extends Component {
     return (
       <div>
     <h4>Individual Chat called here</h4>
-    {this.props.convoArray[0].name}
+    {this.state.convoArray[0].name}
     </div>
     )
   }

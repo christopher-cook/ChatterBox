@@ -8,8 +8,7 @@ class App extends Component {
     super(props)
     this.state = {
       name: '',
-      age: '',
-      fav_color: '',
+      feed: '',
       convoArray: []
     }
   }
@@ -46,7 +45,7 @@ class App extends Component {
         <ChatList
           convoArray={this.state.convoArray}
         />
-        
+        <Form />
       </div>
     )
   }

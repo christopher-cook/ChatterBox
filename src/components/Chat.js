@@ -5,8 +5,7 @@ class Chat extends Component {
     return (
       <div className ="chatz">
       {this.props.convo.name}<br />
-      {this.props.convo.age}<br />
-      {this.props.convo.fav_color}<br />
+      {this.props.convo.feed}<br />
 
     </div>
     )

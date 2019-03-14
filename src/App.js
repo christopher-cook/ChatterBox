@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ChatList from './components/ChatList.js';
-
+import Form from './components/Form.js';
 import Header from './components/Header.js';
+
 class App extends Component {
   constructor (props) {
     super(props)
@@ -40,11 +41,12 @@ class App extends Component {
     // console.log(this.state.convoArray); //testing fetch data
     return (
       <div>
-        <h1>Working React frontend</h1>
+        <h1>ChatterBox</h1>
         <Header />
         <ChatList
           convoArray={this.state.convoArray}
         />
+        <Form />
       </div>
     )
   }

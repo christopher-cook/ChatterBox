@@ -10,15 +10,20 @@ class Form extends Component {
   handleChange = (e) => {
     this.setState({ keyed_item: e.target.value})
   }
+  clearForm = () => {
+    this.setState({ keyed_item: ''})
+  }
   handleSubmit = (e) => {
     e.preventDefault();
     // this.props.handleCreateChat();
+    this.clearForm()
   }
   render() {
     return (
-      <div>
-        // <input type="text" value={this.state.chatInfo}/>
-      </div>
+      <form onSubmit={this.handleSubmit}>
+        <input type="text" value={this.state.keyed_item} onChange={this.handleChange} placeholder="enter comment here..."/>
+        <button type="submit" className="subButton">Submit</button>
+      </form>
   )
   }
 }

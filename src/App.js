@@ -22,7 +22,7 @@ class App extends Component {
       .catch(err => console.log(err));
   }
   componentDidMount() {
-    this.fetchData();
+    this.fetchData()
   }
   showData = (convos) => {
     let convoArray =[]
@@ -36,6 +36,9 @@ class App extends Component {
       convoArray: allConvos
     })
   }
+  handleCreateChat = (chat) => {
+    console.log(chat)
+  }
   render() {
     // console.log(this.state.convoArray); //testing fetch data
     return (
@@ -45,7 +48,9 @@ class App extends Component {
         <ChatList
           convoArray={this.state.convoArray}
         />
-        <Form />
+        <Form
+          handleCreateChat={this.handleCreateChat}
+        />
       </div>
     )
   }

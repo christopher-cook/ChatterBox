@@ -37,7 +37,7 @@ class App extends Component {
     })
   }
   render() {
-    console.log(this.state.convoArray);
+    // console.log(this.state.convoArray); //testing fetch data
     return (
       <div>
         <h1>Working React frontend</h1>

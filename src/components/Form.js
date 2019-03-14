@@ -17,7 +17,7 @@ class Form extends Component {
   render() {
     return (
       <div>
-        <input type="text" value={this.state.chatInfo}/>
+        // <input type="text" value={this.state.chatInfo}/>
       </div>
   )
   }

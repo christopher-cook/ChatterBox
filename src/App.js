@@ -44,8 +44,8 @@ class App extends Component {
     console.log(this.state.convoArray);
     return (
       <div>
-        <h1>Working React front-end</h1>
-        {this.state.data[0].name}
+        <h1>Working React frontend</h1>
+        {data[0].name}
         <Header />
         <ChatList />
       </div>

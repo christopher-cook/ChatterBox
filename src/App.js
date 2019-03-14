@@ -36,7 +36,7 @@ class App extends Component {
     })
   }
   render() {
-    console.log(convoArray[0]);
+    console.log(convoArray[0]["name"]);
     return (
       <div>
         <h1>Working React frontend</h1>

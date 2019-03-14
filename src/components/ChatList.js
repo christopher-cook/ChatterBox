@@ -4,6 +4,7 @@ import Chat from './Chat.js';
 class ChatList extends Component {
   render() {
     return (
+      <div>
       {this.props.convoArray.map((convo, index) => {
         return (
           <Chat
@@ -12,6 +13,7 @@ class ChatList extends Component {
           />
         )
       })}
+      </div>
     )
   }
 }

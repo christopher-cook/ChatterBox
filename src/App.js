@@ -42,6 +42,7 @@ class App extends Component {
         <h1>Working React frontend</h1>
         <Header />
         <ChatList />
+        {this.state.convoArray}
       </div>
     )
   }

@@ -9,7 +9,7 @@ class App extends Component {
       name: '',
       age: '',
       fav_color: '',
-      data: []
+      data2: []
     }
   }
 
@@ -20,7 +20,7 @@ class App extends Component {
         // this.showData(data)
         // console.log(data);
         this.setState({
-          data: data
+          data2: data
         })
       })
       .catch(err => console.log(err));
@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <div>
         <h1>Working React frontend</h1>
-        {data[0].name}
+        {this.data2[0].name}
         <Header />
         <ChatList />
       </div>

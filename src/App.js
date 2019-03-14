@@ -45,7 +45,7 @@ class App extends Component {
     return (
       <div>
         <h1>Working React frontend</h1>
-        {this.data2[0].name}
+        {this.data2.name}
         <Header />
         <ChatList />
       </div>

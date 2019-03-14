@@ -8,8 +8,7 @@ class App extends Component {
     this.state = {
       name: '',
       age: '',
-      fav_color: '',
-      data2: []
+      fav_color: ''
     }
   }
 

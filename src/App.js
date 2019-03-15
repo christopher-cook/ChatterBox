@@ -9,8 +9,7 @@ class App extends Component {
     this.state = {
       name: '',
       feed: '',
-      convoArray: [],
-      prevState: []
+      convoArray: []
     }
   }
 
@@ -51,7 +50,7 @@ class App extends Component {
     })
     .then(data => {
       this.fetchData()
-      this.updateChatArray(data, 'allConvos')
+      this.updateChatArray(data, allConvos)
     })
     .catch(err => console.log(err))
   }

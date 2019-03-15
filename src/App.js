@@ -12,6 +12,9 @@ class App extends Component {
       convoArray: []
     }
   }
+  // handleView = (view) => {
+  //   this.setState({seeChats: view})
+  // }
 
   fetchData = () => {
     fetch('http://192.168.1.131:3000/chats') //working fetch address for server
@@ -33,8 +36,8 @@ class App extends Component {
     .then(createdChat => {
       return createdChat.json()
     })
-    .then(data => {
-      this.updateChatArray(data, 'convoArray')
+    .then(chatData => {
+      this.updateChatArray(chatData, 'convoArray')
       this.fetchData()
     })
     .catch(err => console.log(err))

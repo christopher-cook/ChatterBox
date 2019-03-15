@@ -15,13 +15,13 @@ class Form extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.handleCreateChat(this.props.keyed_item);
+    this.props.handleCreateChat(this.state);
     this.clearForm()
   }
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input type="text" value={this.state.keyed_item} onChange={this.handleChange} placeholder="enter comment here..."/>
+        <input type="text" value={this.props.keyed_item} onChange={this.handleChange} placeholder="enter comment here..."/>
         <button type="submit" className="subButton">Submit</button>
       </form>
   )

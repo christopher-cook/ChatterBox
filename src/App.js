@@ -37,7 +37,7 @@ class App extends Component {
     })
   }
   handleCreateChat = (chat) => {
-    fetch('http://192.168.1.131/chats', {
+    fetch('http://192.168.1.131:3000/chats', {
       body: JSON.stringify(chat),
       method: 'PUT',
       headers: {

@@ -15,7 +15,7 @@ class Form extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.handleCreateChat(this.state.keyed_item);
+    this.props.handleCreateChat(keyed_item);
     this.clearForm()
   }
   render() {

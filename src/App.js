@@ -37,8 +37,23 @@ class App extends Component {
     })
   }
   handleCreateChat = (chat) => {
-    console.log(chat)
+    fetch('http://192.168.1.131/chats', {
+      body: JSON.stringify(chat),
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-type': 'application/json'
+      }
+    })
+    .then(createdChat => {
+      return createdChat.json()
+    })
+    .then(data => {
+      this.fetchData()
+    })
+    .catch(err => console.log(err))
   }
+
   render() {
     // console.log(this.state.convoArray); //testing fetch data
     return (

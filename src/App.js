@@ -55,8 +55,13 @@ class App extends Component {
     .catch(err => console.log(err))
   }
   updateChatArray = (chat, array) => {
-    console.log(chat);
-    console.log(array);
+    this.setState(prevState => {
+      prevState[array].push(chat)
+      console.log(prevState)
+      return {
+        [array]: prevState[array]
+      }
+    })
   }
   render() {
     // console.log(this.state.convoArray); //testing fetch data

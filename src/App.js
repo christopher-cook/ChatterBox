@@ -9,7 +9,8 @@ class App extends Component {
     this.state = {
       name: '',
       feed: '',
-      convoArray: []
+      convoArray: [],
+      prevState: []
     }
   }
 

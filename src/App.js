@@ -21,18 +21,6 @@ class App extends Component {
       })
       .catch(err => console.log(err));
   }
-  showData = (convos) => {
-    let convoArray = []
-    convos.forEach((convo) => {
-      convoArray.push(convo)
-    })
-    this.setData(convoArray)
-  }
-  setData = (allConvos) => {
-    this.setState({
-      convoArray: allConvos
-    })
-  }
   handleCreateChat = (chat) => {
     fetch('http://192.168.1.131:3000/chats', {
       body: JSON.stringify(chat),
@@ -50,6 +38,18 @@ class App extends Component {
       this.fetchData()
     })
     .catch(err => console.log(err))
+  }
+  showData = (convos) => {
+    let convoArray = []
+    convos.forEach((convo) => {
+      convoArray.push(convo)
+    })
+    this.setData(convoArray)
+  }
+  setData = (allConvos) => {
+    this.setState({
+      convoArray: allConvos
+    })
   }
   updateChatArray = (chat, array) => {
     this.setState(prevState => {

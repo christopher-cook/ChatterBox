@@ -21,11 +21,8 @@ class App extends Component {
       })
       .catch(err => console.log(err));
   }
-  componentDidMount() {
-    this.fetchData()
-  }
   showData = (convos) => {
-    let convoArray =[]
+    let convoArray = []
     convos.forEach((convo) => {
       convoArray.push(convo)
     })
@@ -42,15 +39,15 @@ class App extends Component {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
-        'Content-type': 'application/json'
+        'Content-Type': 'application/json'
       }
     })
     .then(createdChat => {
       return createdChat.json()
     })
     .then(data => {
-      this.fetchData()
       this.updateChatArray(data, convoArray)
+      this.fetchData()
     })
     .catch(err => console.log(err))
   }
@@ -62,6 +59,9 @@ class App extends Component {
         [array]: prevState[array]
       }
     })
+  }
+  componentDidMount() {
+    this.fetchData()
   }
   render() {
     // console.log(this.state.convoArray); //testing fetch data

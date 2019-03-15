@@ -50,10 +50,14 @@ class App extends Component {
     })
     .then(data => {
       this.fetchData()
+      this.updateChatArray(data, convoArray)
     })
     .catch(err => console.log(err))
   }
-
+  updateChatArray = (chat, array) => {
+    console.log(chat);
+    console.log(array);
+  }
   render() {
     // console.log(this.state.convoArray); //testing fetch data
     return (

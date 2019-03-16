@@ -7,8 +7,8 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: '',
-      feed: '',
+      // name: '',
+      // feed: '',
       convoArray: []
     }
   }
@@ -24,6 +24,9 @@ class App extends Component {
       })
       .catch(err => console.log(err));
   }
+  componentDidMount() {
+    this.fetchData()
+  }
   handleCreateChat = () => {
     const newChat = {
       name: this.state.name,
@@ -38,7 +41,7 @@ class App extends Component {
       }
     })
     .then(createdChat => {
-      createdChat.json()
+      return createdChat.json()
     })
     .then(chatData => {
       this.updateChatArray(chatData, 'convoArray')
@@ -61,14 +64,11 @@ class App extends Component {
   updateChatArray = (chat, array) => {
     this.setState(prevState => {
       prevState[array].push(chat)
-      console.log(prevState)
+      // console.log(prevState)
       return {
         [array]: prevState[array]
       }
     })
-  }
-  componentDidMount() {
-    this.fetchData()
   }
   render() {
     return (

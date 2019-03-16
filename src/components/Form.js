@@ -7,10 +7,10 @@ class Form extends Component {
       keyed_item: ''
     }
   }
-  handleChange = () => {
+  handleChange = (event) => {
     this.setState({
-      name: this.target.value,
-      feed: this.target.value
+      name: event.target.value,
+      feed: event.target.value
       })
   }
   clearForm = () => {

@@ -7,18 +7,18 @@ class Form extends Component {
       keyed_item: ''
     }
   }
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({
-      name: event.target.value,
-      feed: event.target.value
+      [event.target.name]: event.target.value,
+      [event.target.feed]: event.target.value
       })
   }
   clearForm = () => {
     this.setState({ keyed_item: ''})
   }
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.props.handleCreateChat(this.state);
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.handleCreateChat();
     this.clearForm()
   }
   render() {

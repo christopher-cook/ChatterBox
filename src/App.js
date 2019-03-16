@@ -8,7 +8,6 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: '',
       feed: '',
       convoArray: []
     }
@@ -73,7 +72,6 @@ class App extends Component {
           convoArray={this.state.convoArray}
         />
         <Form
-          name={this.state.name}
           feed={this.state.feed}
           handleCreateChat={this.handleCreateChat}
         />

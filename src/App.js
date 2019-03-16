@@ -71,7 +71,7 @@ class App extends Component {
     this.fetchData()
   }
   render() {
-    console.log(this.state.newChat); //testing fetch data
+    console.log(newChat); //testing fetch data
     return (
       <div>
         <h1>ChatterBox</h1>

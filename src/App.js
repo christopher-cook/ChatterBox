@@ -7,14 +7,11 @@ class App extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      // name: '',
-      // feed: '',
+      name: '',
+      feed: '',
       convoArray: []
     }
   }
-  // handleView = (view) => {
-  //   this.setState({seeChats: view})
-  // }
 
   fetchData = () => {
     fetch('http://192.168.1.131:3000/chats') //working fetch address for server
@@ -27,11 +24,7 @@ class App extends Component {
   componentDidMount() {
     this.fetchData()
   }
-  handleCreateChat = () => {
-    const newChat = {
-      name: this.state.name,
-      feed: this.state.feed
-    };
+  handleCreateChat = (newChat) => {
     fetch('http://192.168.1.131:3000/chats', {
       body: JSON.stringify(newChat),
       method: 'POST',
@@ -43,8 +36,8 @@ class App extends Component {
     .then(createdChat => {
       return createdChat.json()
     })
-    .then(chatData => {
-      this.updateChatArray(chatData, 'convoArray')
+    .then(data => {
+      this.updateChatArray(data, 'convoArray')
       this.fetchData()
     })
     .catch(err => console.log(err))
@@ -61,15 +54,15 @@ class App extends Component {
       convoArray: allConvos
     })
   }
-  updateChatArray = (chat, array) => {
-    this.setState(prevState => {
-      prevState[array].push(chat)
-      // console.log(prevState)
-      return {
-        [array]: prevState[array]
-      }
-    })
-  }
+  // updateChatArray = (chat, array) => {
+  //   this.setState(prevState => {
+  //     prevState[array].push(chat)
+  //     // console.log(prevState)
+  //     return {
+  //       [array]: prevState[array]
+  //     }
+  //   })
+  // }
   render() {
     return (
       <div>
@@ -79,6 +72,8 @@ class App extends Component {
           convoArray={this.state.convoArray}
         />
         <Form
+          name={this.state.name}
+          feed={this.state.feed}
           handleCreateChat={this.handleCreateChat}
         />
       </div>

@@ -54,15 +54,15 @@ class App extends Component {
       convoArray: allConvos
     })
   }
-  // updateChatArray = (chat, array) => {
-  //   this.setState(prevState => {
-  //     prevState[array].push(chat)
-  //     // console.log(prevState)
-  //     return {
-  //       [array]: prevState[array]
-  //     }
-  //   })
-  // }
+  updateChatArray = (chat, array) => {
+    this.setState(prevState => {
+      prevState[array].push(chat)
+      // console.log(prevState)
+      return {
+        [array]: prevState[array]
+      }
+    })
+  }
   render() {
     return (
       <div>

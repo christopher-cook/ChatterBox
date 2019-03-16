@@ -9,8 +9,8 @@ class Form extends Component {
   }
   handleChange = event => {
     this.setState({
-      name: event.target.value,
-      feed: event.target.value
+      name: event.target.name,
+      feed: event.target.feed
       })
   }
   clearForm = () => {

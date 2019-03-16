@@ -41,7 +41,7 @@ class App extends Component {
       createdChat.json()
     })
     .then(chatData => {
-      // this.updateChatArray(chatData, 'convoArray')
+      this.updateChatArray(chatData, 'convoArray')
       this.fetchData()
     })
     .catch(err => console.log(err))
@@ -58,20 +58,19 @@ class App extends Component {
       convoArray: allConvos
     })
   }
-  // updateChatArray = (chat, array) => {
-  //   this.setState(prevState => {
-  //     prevState[array].push(chat)
-  //     console.log(prevState)
-  //     return {
-  //       [array]: prevState[array]
-  //     }
-  //   })
-  // }
+  updateChatArray = (chat, array) => {
+    this.setState(prevState => {
+      prevState[array].push(chat)
+      console.log(prevState)
+      return {
+        [array]: prevState[array]
+      }
+    })
+  }
   componentDidMount() {
     this.fetchData()
   }
   render() {
-    console.log(newChat); //testing fetch data
     return (
       <div>
         <h1>ChatterBox</h1>

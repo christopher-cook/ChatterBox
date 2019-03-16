@@ -24,9 +24,13 @@ class App extends Component {
       })
       .catch(err => console.log(err));
   }
-  handleCreateChat = (chat) => {
+  handleCreateChat = () => {
+    const newChat = {
+      name: this.state.name,
+      feed: this.state.feed
+    };
     fetch('http://192.168.1.131:3000/chats', {
-      body: JSON.stringify(chat),
+      body: JSON.stringify(newChat),
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -34,10 +38,10 @@ class App extends Component {
       }
     })
     .then(createdChat => {
-      return createdChat.json()
+      createdChat.json()
     })
     .then(chatData => {
-      this.updateChatArray(chatData, 'convoArray')
+      // this.updateChatArray(chatData, 'convoArray')
       this.fetchData()
     })
     .catch(err => console.log(err))
@@ -54,15 +58,15 @@ class App extends Component {
       convoArray: allConvos
     })
   }
-  updateChatArray = (chat, array) => {
-    this.setState(prevState => {
-      prevState[array].push(chat)
-      console.log(prevState)
-      return {
-        [array]: prevState[array]
-      }
-    })
-  }
+  // updateChatArray = (chat, array) => {
+  //   this.setState(prevState => {
+  //     prevState[array].push(chat)
+  //     console.log(prevState)
+  //     return {
+  //       [array]: prevState[array]
+  //     }
+  //   })
+  // }
   componentDidMount() {
     this.fetchData()
   }

@@ -76,8 +76,8 @@ class App extends Component {
           'Content-Type': 'application/json'
       }
     })
-    .then(updatedChat => {
-      return updatedChat.json()
+    .then(jChat => {
+      return jChat.json()
     })
     .then(data => {
       this.fetchData()

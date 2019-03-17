@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   fetchData = () => {
-    fetch('http://192.168.1.131:3000/chats') //working fetch address for server
+    fetch('http://68.132.86.66:3000/chats') //working fetch address for server
       .then(response => response.json())
       .then(data => {
         this.showData(data)
@@ -25,7 +25,7 @@ class App extends Component {
     this.fetchData()
   }
   handleCreateChat = (newChat) => {
-    fetch('http://192.168.1.131:3000/chats', {
+    fetch('http://68.132.86.66:3000/chats', {
       body: JSON.stringify(newChat),
       method: 'POST',
       headers: {
@@ -67,7 +67,7 @@ class App extends Component {
     // console.log(task);
     // console.log(arrayIndex);
     // console.log(currentArray);
-    fetch(`http://192.168.1.131:3000/chats/${chat.id}`, {
+    fetch(`http://68.132.86.66:3000/chats/${chat.id}`, {
       body: JSON.stringify(chat),
       method: 'PUT',
       headers: {
@@ -81,6 +81,7 @@ class App extends Component {
     .then(data => {
       this.fetchData()
     })
+    .catch(err => console.log(err))
   }
 
 

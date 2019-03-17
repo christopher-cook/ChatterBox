@@ -5,7 +5,7 @@ class Chat extends Component {
     return (
       <div className ="chatz">
       {this.props.convo.name}<br />
-      {this.props.convo.feed}<br />
+      {this.props.convo.feed}<button type="submit">Edit</button><br />
     </div>
     )
   }

@@ -63,6 +63,28 @@ class App extends Component {
       }
     })
   }
+  handleCheck = (chat, arrayIndex, currentArray) => {
+    // console.log(task);
+    // console.log(arrayIndex);
+    // console.log(currentArray);
+    fetch(`http://192.168.1.131:3000/chats/${chat.id}`, {
+      body: JSON.stringify(chat),
+      method: 'PUT',
+      headers: {
+          'Accept': 'application/json, text/plain, */*',
+          'Content-Type': 'application/json'
+      }
+    })
+    .then(updatedChat => {
+      return updatedChat.json()
+    })
+    .then(data => {
+      this.fetchData()
+    })
+  }
+
+
+
   render() {
     return (
       <div>
@@ -70,6 +92,7 @@ class App extends Component {
         <Header />
         <ChatList
           convoArray={this.state.convoArray}
+          handleCheck={this.handleCheck}
         />
         <Form
           handleCreateChat={this.handleCreateChat}

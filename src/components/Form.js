@@ -28,6 +28,7 @@ class Form extends Component {
       <form onSubmit={this.handleSubmit}>
         <input type="text" value={this.state.name} id="name" onChange={this.handleChange} placeholder="commenter name" />
         <input type="text" value={this.state.feed} id="feed" onChange={this.handleChange} placeholder="enter comment here..." />
+        <button onClick=""></button>
         <button type="submit" className="subButton">Submit</button>
       </form>
       </div>

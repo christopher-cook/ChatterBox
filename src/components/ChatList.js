@@ -10,6 +10,8 @@ class ChatList extends Component {
           <Chat
             key={index}
             convo={convo}
+            arrayIndex={index}
+            handleCheck={this.props.handleCheck}
           />
         )
       })}

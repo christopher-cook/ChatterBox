@@ -72,7 +72,6 @@ class App extends Component {
           convoArray={this.state.convoArray}
         />
         <Form
-          feed={this.state.feed}
           handleCreateChat={this.handleCreateChat}
         />
       </div>

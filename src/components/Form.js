@@ -11,7 +11,7 @@ class Form extends Component {
   }
   handleChange = event => {
     this.setState({
-      feed: event.target.value
+      [event.target.id]: event.target.value
       })
   }
   clearForm = () => {
@@ -26,8 +26,8 @@ class Form extends Component {
     return (
       <div>
       <form onSubmit={this.handleSubmit}>
-        <input type="text" value={this.props.name} onChange={this.handleChange} placeholder="commenter name" />
-        <input type="text" value={this.props.feed} onChange={this.handleChange} placeholder="enter comment here..." />
+        <input type="text" value={this.props.name} id="name" onChange={this.handleChange} placeholder="commenter name" />
+        <input type="text" value={this.props.feed} id="feed" onChange={this.handleChange} placeholder="enter comment here..." />
         <button type="submit" className="subButton">Submit</button>
       </form>
       </div>

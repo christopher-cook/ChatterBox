@@ -21,9 +21,7 @@ class App extends Component {
       })
       .catch(err => console.log(err));
   }
-  componentDidMount() {
-    this.fetchData()
-  }
+
   handleCreateChat = (newChat) => {
     fetch('http://68.132.86.66:3000/chats', {
       body: JSON.stringify(newChat),
@@ -63,10 +61,13 @@ class App extends Component {
       }
     })
   }
-  handleCheck = (chat, arrayIndex, currentArray) => {
+  handleCheck = (chat, index, array) => {
     // console.log(task);
     // console.log(arrayIndex);
     // console.log(currentArray);
+    this.editChat(chat)
+}
+    editChat = (chat, index) => {
     fetch(`http://68.132.86.66:3000/chats/${chat.id}`, {
       body: JSON.stringify(chat),
       method: 'PUT',
@@ -83,8 +84,9 @@ class App extends Component {
     })
     .catch(err => console.log(err))
   }
-
-
+  componentDidMount() {
+    this.fetchData()
+  }
 
   render() {
     return (

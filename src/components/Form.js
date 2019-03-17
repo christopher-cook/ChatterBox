@@ -4,17 +4,18 @@ class Form extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      name: '',
       feed: ''
     }
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange = event => {
     this.setState({
-      value: event.target.value
+      feed: event.target.value
       })
   }
   clearForm = () => {
-    this.setState({ feed: ''})
+    this.setState({ name: '', feed: ''})
   }
   handleSubmit = event => {
     event.preventDefault();
@@ -25,6 +26,7 @@ class Form extends Component {
     return (
       <div>
       <form onSubmit={this.handleSubmit}>
+        <input type="text" value={this.props.name} onChange={this.handleChange} placeholder="commenter name" />
         <input type="text" value={this.props.feed} onChange={this.handleChange} placeholder="enter comment here..." />
         <button type="submit" className="subButton">Submit</button>
       </form>

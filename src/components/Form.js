@@ -7,7 +7,7 @@ class Form extends Component {
       name: '',
       feed: ''
     }
-    this.handleChange = this.handleChange.bind(this);
+  
   }
   handleChange = event => {
     this.setState({

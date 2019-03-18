@@ -18,7 +18,7 @@ class Form extends Component {
     this.setState({
       name: '',
       feed: '',
-      submit: 'Add Comment'
+      submit: 'addChat'
     })
   }
   handleSubmit = (event) => {

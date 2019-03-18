@@ -20,6 +20,18 @@ class App extends Component {
       })
       .catch(err => console.log(err));
   }
+  showData = (convos) => {
+   let convoArray = []
+   convos.forEach((convo) => {
+     convoArray.push(convo)
+   })
+   this.setData(convoArray)
+ }
+ setData = (allConvos) => {
+   this.setState({
+     convoArray: allConvos
+   })
+ }
 
   createChat = (newChat) => {
     fetch('http://68.132.86.66:3000/chats', {

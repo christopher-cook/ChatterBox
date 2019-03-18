@@ -24,14 +24,13 @@ componentDidMount() {
 }
   render() {
     return (
-      <div>
-      { }
+      <div className="chatLog">
       {this.state.static ? //will show on page if true
         <div className ="chatz">
         {this.props.convo.name}<br />
         {this.props.convo.feed}<br /><button onClick={this.changeState}>Edit</button>
         </div> :
-      <div>
+      <div className="chatzEdit">
         <Form
           chat={this.props.chat}
           handleCheck={this.props.handleCheck}

@@ -50,7 +50,7 @@ class Form extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="formInput">
       <form onSubmit={this.handleSubmit}>
         <input type="text"
           value={this.state.name}

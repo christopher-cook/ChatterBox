@@ -35,7 +35,7 @@ class App extends Component {
     })
     .then(data => {
       this.updateChatArray(data, 'convoArray')
-      this.fetchData()
+      // this.fetchData()
     })
     .catch(err => console.log(err))
   }

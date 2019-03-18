@@ -12,6 +12,8 @@ class ChatList extends Component {
             convo={convo}
             arrayIndex={index}
             handleCheck={this.props.handleCheck}
+            deleteChat={this.props.deleteChat}
+            currentArray='convoArray'
           />
         )
       })}

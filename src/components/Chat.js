@@ -30,6 +30,7 @@ componentDidMount() {
         <div className="chatz">
         {this.props.convo.name}<br />
         {this.props.convo.feed}<br /><button onClick={this.changeState}>Edit</button>
+        <button onClick={this.props.deleteChat(this.props.convo.id, this.props.arrayIndex, this.props.currentArray)}>Delete Chat</button>
         </div> :
       <div className="chatzEdit">
         <Form

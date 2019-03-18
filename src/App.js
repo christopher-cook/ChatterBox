@@ -12,7 +12,7 @@ class App extends Component {
     }
   }
 
-  fetchData = () => {
+fetchData = () => {
     fetch('http://68.132.86.66:3000/chats') //working fetch address for server
       .then(response => response.json())
       .then(data => {
@@ -21,20 +21,22 @@ class App extends Component {
       })
       .catch(err => console.log(err));
   }
-  showData = (convos) => {
+
+showData = (convos) => {
    let convoArray = []
    convos.forEach((convo) => {
      convoArray.push(convo)
    })
    this.setData(convoArray)
- }
+  }
+
  setData = (allConvos) => {
    this.setState({
      convoArray: allConvos
    })
  }
 
-  createChat = (newChat) => {
+ createChat = (newChat) => {
     fetch('http://68.132.86.66:3000/chats', {
       body: JSON.stringify(newChat),
       method: 'POST',
@@ -48,11 +50,11 @@ class App extends Component {
     })
     .then(data => {
       this.updateChatArray(data, 'convoArray')
-      console.log(data);
     })
     .catch(err => console.log(err))
   }
-    handleCheck = (chat, arrayIndex) => {
+
+  handleCheck = (chat, arrayIndex) => {
       this.editChat(chat, arrayIndex)
     }
 
@@ -61,36 +63,47 @@ class App extends Component {
       prevState[array].push(chat)
       // console.log(prevState)
       return {
-        convoArray: prevState[array]
+  convoArray: prevState[array]
       }
     })
   }
-  // removeChatArr = (chat, arrayIndex) => {
-  //   this.setState(prevState => {
-  //     prevState[array].splice(arrayIndex, 1)
-  //     return {
-  //       [array]: prevState[array]
-  //     }
-  //   })
-  // }
 
-    editChat = (chat, index) => {
-    fetch(`http://68.132.86.66:3000/chats/${chat.id}`, {
+  removeChatArr = (chat, arrayIndex) => {
+    this.setState(prevState => {
+      prevState[array].splice(arrayIndex, 1)
+      return {
+        [array]: prevState[array]
+      }
+    })
+  }
+
+  deleteChat = (id, arrayIndex, currentArray) => {
+    fetch(`http://68.132.86.66:3000/chats/${id}`, {
+      method: 'DELETE'
+    })
+    .then(data => {
+      this.removeChatArr(currentArray, arrayIndex)
+    })
+    .catch(err => console.log(err))
+}
+
+  editChat = (chat, index) => {
+    fetch(`http://68.132.86.66:3000/chats/${id}`, {
       body: JSON.stringify(chat),
       method: 'PUT',
       headers: {
           'Accept': 'application/json, text/plain, */*',
           'Content-Type': 'application/json'
-      }
-    })
-    .then(jChat => {
-      return jChat.json()
-    })
-    .then(data => {
-      this.fetchData()
-    })
-    .catch(err => console.log(err))
-  }
+        }
+      })
+      .then(jChat => {
+        return jChat.json()
+      })
+      .then(data => {
+        this.fetchData()
+      })
+      .catch(err => console.log(err))
+    }
 
   componentDidMount() {
     this.fetchData()
@@ -104,6 +117,8 @@ class App extends Component {
         <ChatList
           convoArray={this.state.convoArray}
           handleCheck={this.handleCheck}
+          deleteChat={this.deleteChat}
+          currentArray='convoArray'
         />
         <Form
           createChat={this.createChat}

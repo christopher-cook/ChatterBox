@@ -22,14 +22,13 @@ class Form extends Component {
     })
   }
   handleSubmit = (event) => {
-    console.log(this.props.convo.id)
     event.preventDefault()
     if (this.state.submit === 'addChat') {
       this.props.createChat(this.state)
       this.clearForm()
   } else {
     let updatedChat = {
-      id: this.props.convo.id,
+      id: this.props.chat.id,
       name: this.state.name,
       feed: this.state.feed
     }
@@ -50,7 +49,6 @@ class Form extends Component {
     this.checkForEdit()
   }
   render() {
-    console.log(this.props.convo)
     return (
       <div className="formInput">
       <form onSubmit={this.handleSubmit}>

@@ -10,7 +10,7 @@ class Form extends Component {
     }
 
   }
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({
       [event.target.id]: event.target.value
       })
@@ -18,7 +18,7 @@ class Form extends Component {
   clearForm = () => {
     this.setState({ name: '', feed: '', submit: 'addChat'})
   }
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault();
     if (this.state.submit === 'addChat') {
       this.props.createChat(this.state);

@@ -61,7 +61,6 @@ showData = (convos) => {
   updateChatArray = (convo, array) => {//
     this.setState(prevState => {
       prevState[array].push(convo)//
-      // console.log(prevState)
       return {
   convoArray: prevState[array]
       }

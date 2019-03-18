@@ -25,7 +25,6 @@ componentDidMount() {
   render() {
     return (
       <div className="chatLog">
-
       {this.state.static ? //will show on page if true
         <div className="chatz">
         {this.props.convo.name}<br />

@@ -68,7 +68,7 @@ showData = (convos) => {
     })
   }
 
-  removeChatArr = (chat, arrayIndex) => {
+  removeChatArr = (array, arrayIndex) => {
     this.setState(prevState => {
       prevState[array].splice(arrayIndex, 1)
       return {

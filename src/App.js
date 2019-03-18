@@ -97,7 +97,6 @@ class App extends Component {
           handleCheck={this.handleCheck}
         />
         <Form
-          handleCheck={this.handleCheck}
           createChat={this.createChat}
         />
       </div>

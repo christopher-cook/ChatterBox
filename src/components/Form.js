@@ -20,9 +20,8 @@ class Form extends Component {
   }
   handleSubmit = (event) => {
     event.preventDefault()
-    console.log(this.state);
     if (this.state.submit === 'addChat') {
-      this.state.createChat(this.state)
+      this.props.createChat(this.state)
       this.clearForm()
   } else {
     let updatedChat = {

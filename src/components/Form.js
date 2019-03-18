@@ -19,9 +19,10 @@ class Form extends Component {
     this.setState({ name: '', feed: '', submit: 'addChat'})
   }
   handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
     if (this.state.submit === 'addChat') {
-      this.props.createChat(this.state);
+      this.props.createChat(this.state)
+      this.clearForm()
   } else {
     let updatedChat = {
       id: this.props.chat.id,
@@ -31,7 +32,6 @@ class Form extends Component {
     this.props.handleCheck(updatedChat, this.props.arrayIndex, 'chats')
     this.props.changeState()
   }
-    this.clearForm()
   }
   render() {
     return (

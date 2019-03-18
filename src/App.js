@@ -16,7 +16,8 @@ class App extends Component {
     fetch('http://68.132.86.66:3000/chats') //working fetch address for server
       .then(response => response.json())
       .then(data => {
-        this.setState({ convoArray: data})
+        // this.setState({ convoArray: data})
+        this.showData(data)
       })
       .catch(err => console.log(err));
   }

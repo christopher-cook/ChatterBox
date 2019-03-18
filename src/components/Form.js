@@ -38,7 +38,6 @@ class Form extends Component {
   }
   }
   checkForEdit = () => {
-    console.log(this.props.convo)
     if(this.props.convo) {
       this.setState({
         name: this.props.convo.name,
@@ -51,6 +50,7 @@ class Form extends Component {
     this.checkForEdit()
   }
   render() {
+    console.log(this.props.convo)
     return (
       <div className="formInput">
       <form onSubmit={this.handleSubmit}>

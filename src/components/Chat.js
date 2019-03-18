@@ -9,12 +9,12 @@ class Chat extends Component {
       feed: '',
       static: true
     }
+  }
   changeState = () => {
     this.setState({
       static: !this.state.static  //changes static state
     })
   }
-}
 componentDidMount() {
   if(this.props.updatedChat) {
     this.setState({

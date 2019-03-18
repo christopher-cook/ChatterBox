@@ -58,9 +58,9 @@ showData = (convos) => {
       this.editChat(convo, arrayIndex)
     }
 
-  updateChatArray = (chat, array) => {
+  updateChatArray = (convo, array) => {//
     this.setState(prevState => {
-      prevState[array].push(chat)
+      prevState[array].push(convo)//
       // console.log(prevState)
       return {
   convoArray: prevState[array]
@@ -87,9 +87,9 @@ showData = (convos) => {
     .catch(err => console.log(err))
 }
 
-  editChat = (chat, index) => {
-    fetch(`http://68.132.86.66:3000/chats/${chat.id}`, {
-      body: JSON.stringify(chat),
+  editChat = (convo, index) => {//
+    fetch(`http://68.132.86.66:3000/chats/${convo.id}`, {//
+      body: JSON.stringify(convo),//
       method: 'PUT',
       headers: {
           'Accept': 'application/json, text/plain, */*',

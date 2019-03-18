@@ -28,7 +28,7 @@ class Form extends Component {
       this.clearForm()
   } else {
     let updatedChat = {
-      id: this.props.chat.id,
+      id: this.props.convo.id,//
       name: this.state.name,
       feed: this.state.feed
     }

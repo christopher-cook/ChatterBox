@@ -54,8 +54,8 @@ showData = (convos) => {
     .catch(err => console.log(err))
   }
 
-  handleCheck = (chat, arrayIndex) => {
-      this.editChat(chat, arrayIndex)
+  handleCheck = (convo, arrayIndex) => {
+      this.editChat(convo, arrayIndex)
     }
 
   updateChatArray = (chat, array) => {

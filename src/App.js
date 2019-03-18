@@ -87,7 +87,7 @@ showData = (convos) => {
 }
 
   editChat = (convo, index) => {//
-    fetch(`http://68.132.86.66:3000/chats/${id}`, {//
+    fetch(`http://68.132.86.66:3000/chats/${convo.id}`, {//
       body: JSON.stringify(convo),//
       method: 'PUT',
       headers: {

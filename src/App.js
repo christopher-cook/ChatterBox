@@ -48,7 +48,7 @@ class App extends Component {
     })
     .then(data => {
       this.updateChatArray(data, 'convoArray')
-      // this.fetchData()
+      console.log(data);
     })
     .catch(err => console.log(err))
   }
@@ -98,7 +98,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>ChatterBox</h1>
         <Header />
         <ChatList

@@ -39,13 +39,24 @@ class App extends Component {
     })
     .catch(err => console.log(err))
   }
-
+    handleCheck = (chat, arrayIndex) => {
+      this.editChat(chat, arrayIndex)
+    }
+    
   updateChatArray = (chat, array) => {
     this.setState(prevState => {
       prevState[array].push(chat)
       // console.log(prevState)
       return {
         convoArray: prevState[array]
+      }
+    })
+  }
+  removeChatArr = (chat, arrayIndex) => {
+    this.setState(prevState => {
+      prevState[array].splice(arrayIndex, 1)
+      return {
+        [array]: prevState[array]
       }
     })
   }
@@ -66,10 +77,6 @@ class App extends Component {
       this.fetchData()
     })
     .catch(err => console.log(err))
-  }
-
-  handleCheck = (chat, arrayIndex) => {
-    this.editChat(chat, arrayIndex)
   }
 
   componentDidMount() {

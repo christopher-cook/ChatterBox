@@ -21,7 +21,7 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
-  handleCreateChat = (newChat) => {
+  createChat = (newChat) => {
     fetch('http://68.132.86.66:3000/chats', {
       body: JSON.stringify(newChat),
       method: 'POST',
@@ -79,8 +79,8 @@ class App extends Component {
     .catch(err => console.log(err))
   }
 
-  handleCheck = (chat, arrayIndex, currentArray) => {
-    this.editChat(chat)
+  handleCheck = (chat, arrayIndex) => {
+    this.editChat(chat, arrayIndex)
   }
 
   componentDidMount() {
@@ -98,7 +98,7 @@ class App extends Component {
         />
         <Form
           handleCheck={this.handleCheck}
-          handleCreateChat={this.handleCreateChat}
+          createChat={this.createChat}
         />
       </div>
     )

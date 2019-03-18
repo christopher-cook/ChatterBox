@@ -21,7 +21,7 @@ class Form extends Component {
   handleSubmit = event => {
     event.preventDefault();
     if (this.state.submit === 'addChat') {
-      this.props.handleCreateChat(this.state);
+      this.props.createChat(this.state);
   } else {
     let updatedChat = {
       id: this.props.chat.id,

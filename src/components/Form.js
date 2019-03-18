@@ -26,10 +26,10 @@ class Form extends Component {
   } else {
     let updatedChat = {
       id: this.props.chat.id,
-      name: this.state.name,
-      feed: this.state.feed
+      name: this.props.convo.name,
+      feed: this.state.convo.feed
     }
-    this.props.handleCheck(updatedChat, this.props.arrayIndex, 'convoArray')
+    this.props.handleCheck(updatedChat, this.props.arrayIndex)
     this.props.changeState()
   }
   }

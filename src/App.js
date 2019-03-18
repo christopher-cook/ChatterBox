@@ -61,12 +61,7 @@ class App extends Component {
       }
     })
   }
-  handleCheck = (chat, index, array) => {
-    // console.log(task);
-    // console.log(arrayIndex);
-    // console.log(currentArray);
-    this.editChat(chat)
-}
+
     editChat = (chat, index) => {
     fetch(`http://68.132.86.66:3000/chats/${chat.id}`, {
       body: JSON.stringify(chat),
@@ -84,6 +79,11 @@ class App extends Component {
     })
     .catch(err => console.log(err))
   }
+
+  handleCheck = (chat, arrayIndex, currentArray) => {
+    this.editChat(chat)
+  }
+
   componentDidMount() {
     this.fetchData()
   }
@@ -98,6 +98,7 @@ class App extends Component {
           handleCheck={this.handleCheck}
         />
         <Form
+          handleCheck={this.handleCheck}
           handleCreateChat={this.handleCreateChat}
         />
       </div>

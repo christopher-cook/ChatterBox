@@ -4,7 +4,7 @@ import Chat from './Chat.js';
 class ChatList extends Component {
   render() {
     return (
-      <div>
+      <div className="chatList">
       {this.props.convoArray.map((convo, index) => {
         return (
           <Chat

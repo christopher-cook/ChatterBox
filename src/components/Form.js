@@ -22,6 +22,7 @@ class Form extends Component {
     })
   }
   handleSubmit = (event) => {
+    console.log(this.props.convo.id)
     event.preventDefault()
     if (this.state.submit === 'addChat') {
       this.props.createChat(this.state)

@@ -34,7 +34,7 @@ componentDidMount() {
         <Form
           chat={this.props.chat}
           handleCheck={this.props.handleCheck}
-          index={this.props.index}
+          arrayIndex={this.props.arrayIndex}
           changeState={this.changeState}
         />
       </div>

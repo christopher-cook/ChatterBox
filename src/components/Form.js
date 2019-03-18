@@ -46,7 +46,7 @@ class Form extends Component {
     }
   }
   componentDidMount() {
-    this.checkIfEditing()
+    this.checkForEdit()
   }
   render() {
     return (

@@ -33,6 +33,7 @@ componentDidMount() {
         </div> :
       <div className="chatzEdit">
         <Form
+          createChat={this.props.createChat}
           chat={this.props.chat}
           handleCheck={this.props.handleCheck}
           arrayIndex={this.props.arrayIndex}

@@ -118,6 +118,7 @@ showData = (convos) => {
           convoArray={this.state.convoArray}
           handleCheck={this.handleCheck}
           deleteChat={this.deleteChat}
+          editChat={this.editChat}
           currentArray='convoArray'
         />
         <Form

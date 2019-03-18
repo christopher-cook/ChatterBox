@@ -25,8 +25,8 @@ class Form extends Component {
   } else {
     let updatedChat = {
       id: this.props.chat.id,
-      name: this.props.chat.name,
-      feed: this.props.chat.feed
+      name: this.state.name,
+      feed: this.state.feed
     }
     this.props.handleCheck(updatedChat, this.props.index, 'chats')
     this.props.changeState()

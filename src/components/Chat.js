@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Form from './Form.js';
 
 class Chat extends Component {
@@ -25,6 +25,7 @@ componentDidMount() {
   render() {
     return (
       <div>
+      { }
       {this.state.static ? //will show on page if true
         <div className ="chatz">
         {this.props.convo.name}<br />

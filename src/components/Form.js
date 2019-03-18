@@ -22,7 +22,7 @@ class Form extends Component {
     event.preventDefault()
     console.log(this.state);
     if (this.state.submit === 'addChat') {
-      this.props.createChat(this.state)
+      this.state.createChat(this.state)
       this.clearForm()
   } else {
     let updatedChat = {

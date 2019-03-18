@@ -27,7 +27,6 @@ class Form extends Component {
       this.props.createChat(this.state)
       this.clearForm()
   } else {
-    console.log(arrayIndex);
     let updatedChat = {
       id: this.props.convo.id,
       name: this.state.name,

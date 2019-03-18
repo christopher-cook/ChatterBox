@@ -11,7 +11,7 @@ class ChatList extends Component {
             key={index}
             convo={convo}
             arrayIndex={index}
-            // handleCheck={this.props.handleCheck}
+            handleCheck={this.props.handleCheck}
           />
         )
       })}

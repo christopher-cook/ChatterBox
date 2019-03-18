@@ -29,7 +29,7 @@ class Form extends Component {
       name: this.state.name,
       feed: this.state.feed
     }
-    this.props.handleCheck(updatedChat, this.props.arrayIndex, 'chats')
+    this.props.handleCheck(updatedChat, this.props.arrayIndex, 'convoArray')
     this.props.changeState()
   }
   }

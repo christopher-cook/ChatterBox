@@ -15,7 +15,11 @@ class Form extends Component {
       })
   }
   clearForm = () => {
-    this.setState({ name: '', feed: '', submit: 'addChat'})
+    this.setState({
+      name: '',
+      feed: '',
+      submit: 'Add Comment'
+    })
   }
   handleSubmit = (event) => {
     event.preventDefault()
@@ -31,6 +35,18 @@ class Form extends Component {
     this.props.handleCheck(updatedChat, this.props.arrayIndex, 'convoArray')
     this.props.changeState()
   }
+  }
+  checkForEdit = () => {
+    if(this.props.convo) {
+      this.setState({
+        name: this.props.convo.name,
+        feed: this.props.convo.feed,
+        submit: 'Update'
+      })
+    }
+  }
+  componentDidMount() {
+    this.checkIfEditing()
   }
   render() {
     return (

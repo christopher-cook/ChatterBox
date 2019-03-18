@@ -42,7 +42,7 @@ class App extends Component {
     handleCheck = (chat, arrayIndex) => {
       this.editChat(chat, arrayIndex)
     }
-    
+
   updateChatArray = (chat, array) => {
     this.setState(prevState => {
       prevState[array].push(chat)
@@ -52,14 +52,14 @@ class App extends Component {
       }
     })
   }
-  removeChatArr = (chat, arrayIndex) => {
-    this.setState(prevState => {
-      prevState[array].splice(arrayIndex, 1)
-      return {
-        [array]: prevState[array]
-      }
-    })
-  }
+  // removeChatArr = (chat, arrayIndex) => {
+  //   this.setState(prevState => {
+  //     prevState[array].splice(arrayIndex, 1)
+  //     return {
+  //       [array]: prevState[array]
+  //     }
+  //   })
+  // }
 
     editChat = (chat, index) => {
     fetch(`http://68.132.86.66:3000/chats/${chat.id}`, {

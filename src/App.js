@@ -59,9 +59,9 @@ showData = (convos) => {
       this.editChat(convo, arrayIndex)
     }
 
-  updateChatArray = (convo, array) => {//
+  updateChatArray = (convo, array) => {
     this.setState(prevState => {
-      prevState[array].push(convo)//
+      prevState[array].push(convo)
       return {
   convoArray: prevState[array]
       }
@@ -87,9 +87,9 @@ showData = (convos) => {
     .catch(err => console.log(err))
 }
 
-  editChat = (convo, index) => {//
-    fetch(`http://68.132.86.66:3000/chats/${convo.id}`, {//
-      body: JSON.stringify(convo),//
+  editChat = (convo, index) => {
+    fetch(`http://68.132.86.66:3000/chats/${convo.id}`, {
+      body: JSON.stringify(convo),
       method: 'PUT',
       headers: {
           'Accept': 'application/json, text/plain, */*',
@@ -118,7 +118,7 @@ showData = (convos) => {
           convoArray={this.state.convoArray}
           handleCheck={this.handleCheck}
           deleteChat={this.deleteChat}
-          editChat={this.editChat}
+          editChat={this.editChat}//
           currentArray='convoArray'
         />
         <Form

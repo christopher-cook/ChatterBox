@@ -53,13 +53,13 @@ class Form extends Component {
       <div className="formInput">
       <form onSubmit={this.handleSubmit}>
         <input type="text"
-          value={this.props.name}
+          value={this.state.name}
           id="name"
           onChange={this.handleChange}
           placeholder="commenter name" />
 
         <input type="text"
-          value={this.props.feed}
+          value={this.state.feed}
           id="feed"
           onChange={this.handleChange}
           placeholder="enter comment here..." />

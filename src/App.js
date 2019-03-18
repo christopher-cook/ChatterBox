@@ -50,6 +50,7 @@ showData = (convos) => {
     })
     .then(data => {
       this.updateChatArray(data, 'convoArray')
+      this.fetchData()
     })
     .catch(err => console.log(err))
   }

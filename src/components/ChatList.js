@@ -13,7 +13,7 @@ class ChatList extends Component {
             arrayIndex={index}
             handleCheck={this.props.handleCheck}
             deleteChat={this.props.deleteChat}
-            editChat={this.props.editChat}//
+            editChat={this.props.editChat}//prior miss info caused error on handlesubmit event
             currentArray='convoArray'
           />
         )

@@ -34,7 +34,7 @@ componentDidMount() {
       <div className="chatzEdit">
         <Form
           createChat={this.props.createChat}
-          convo={this.props.convo}//
+          convo={this.props.convo}//wrong ref prior caused err on handlesubmit
           handleCheck={this.props.handleCheck}
           arrayIndex={this.props.arrayIndex}
           changeState={this.changeState}

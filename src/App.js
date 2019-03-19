@@ -16,25 +16,25 @@ fetchData = () => {
     fetch('http://68.132.86.66:3000/chats') //working fetch address for server
       .then(response => response.json())
       .then(data => {
-        // this.setState({ convoArray: data})
-        this.showData(data)
+        this.setState({ convoArray: data})
+        // this.showData(data)
       })
       .catch(err => console.log(err));
   }
 
-showData = (convos) => {
-   let convoArray = []
-   convos.forEach((convo) => {
-     convoArray.push(convo)
-   })
-   this.setData(convoArray)
-  }
-
- setData = (allConvos) => {
-   this.setState({
-     convoArray: allConvos
-   })
- }
+// showData = (convos) => {
+//    let convoArray = []
+//    convos.forEach((convo) => {
+//      convoArray.push(convo)
+//    })
+//    this.setData(convoArray)
+//   }
+//
+//  setData = (allConvos) => {
+//    this.setState({
+//      convoArray: allConvos
+//    })
+//  }
 
  createChat = (newChat) => {
     fetch('http://68.132.86.66:3000/chats', {

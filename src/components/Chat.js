@@ -25,7 +25,7 @@ componentDidMount() {
   render() {
     return (
       <div className="chatLog">
-      {this.state.static ? //will show on page if true
+      {this.state.static ? //will show on page if static is true... we can toggle below with edit button
         <div className="chatz">
         {this.props.convo.name}<br />
         {this.props.convo.feed}<br /><button onClick={this.changeState}>Edit</button>

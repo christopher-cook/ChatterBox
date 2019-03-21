@@ -39,6 +39,7 @@ h2 {
 grid-row-start:1;
 padding-bottom: 5px;
 margin-left: 15px;
+text-align: center;
 }
 .chatList {
   grid-row-start: 4;

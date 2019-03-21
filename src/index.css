@@ -1,4 +1,4 @@
-header::after {
+body::after {
   content: "";
   opacity: 0.8;
   top: 0;

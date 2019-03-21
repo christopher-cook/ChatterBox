@@ -4,9 +4,11 @@ h1 {
 h2 {
   text-decoration: underline;
 }
-.chatz {
+.chatList {
   grid-template-rows: repeat(3, 100px);
   grid-template-columns: repeat(3, 100px);
+}
+.chatz {
   border: 1px solid green;
   max-width: 250px;
   max-height: 250px;

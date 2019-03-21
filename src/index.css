@@ -53,3 +53,8 @@ margin-left: 15px;
 button {
   margin-top: 10px;
 }
+.formInput {
+  padding-left: 10px;
+  grid-row-start: 7;
+  grid-column-start: 1;
+}

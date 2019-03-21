@@ -19,7 +19,7 @@ h1 {
 }
 h2 {
   text-decoration: underline;
-  grid-column-start: 4
+  grid-row-start: 3;
 }
 .container {
   display: grid;
@@ -41,7 +41,8 @@ padding-bottom: 5px;
 margin-left: 15px;
 }
 .chatList {
-  grid-row-start: 5;
+  grid-row-start: 4;
+  grid-row-end: 7;
 }
 button {
   margin-top: 10px;

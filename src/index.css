@@ -11,6 +11,7 @@ body::after {
   z-index: -1;
 }
 h1 {
+  color: #001f3f;
   text-align: center
 }
 h2 {
@@ -22,13 +23,13 @@ h2 {
   grid-template-columns: repeat(3, 30%);
 }
 .chatz {
-  background-color: gray;
-  border: 1px solid green;
+  background-color: #0d63a5;
+  border: 1px solid #ffd717;
   max-width: 250px;
   max-height: 250px;
   padding-bottom: 20px;
   padding-left: 10px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 .chatLog {
 grid-row-start:1

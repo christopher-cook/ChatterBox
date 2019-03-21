@@ -6,7 +6,7 @@ h2 {
 }
 .container {
   display: grid;
-  grid-template-rows: repeat(3, 30%);
+  grid-template-rows: repeat(3, 100px);
   grid-template-columns: repeat(3, 30%);
 }
 .chatz {

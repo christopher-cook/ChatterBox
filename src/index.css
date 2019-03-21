@@ -20,6 +20,7 @@ h1 {
 }
 h2 {
   text-decoration: underline;
+  font-size: 36px;
   grid-row-start: 3;
   text-align: center;
   color: black;
@@ -65,7 +66,7 @@ button {
 input {
   border-radius: 5px;
   border: 1px solid black;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.4);
   color: white;
 }
 #name, #feed {

@@ -22,7 +22,7 @@ h2 {
   grid-row-start: 3;
   text-align: center;
   color: #2a2b5f;
-  text-shadow: 2px 2px #cdd5e0;
+  text-shadow: 1px 1px #cdd5e0;
 }
 .container {
   display: grid;
@@ -49,4 +49,10 @@ margin-left: 15px;
 }
 button {
   margin-top: 10px;
+}
+#name {
+  color: black;
+}
+#feed {
+  color: #fffcea;
 }

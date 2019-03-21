@@ -32,6 +32,7 @@ h2 {
 .chatz {
   background-color: #0d63a5;
   border: 1px solid #ffd717;
+  color: #fffcea;
   max-width: 250px;
   max-height: 250px;
   padding-bottom: 10px;
@@ -49,10 +50,4 @@ margin-left: 15px;
 }
 button {
   margin-top: 10px;
-}
-#name {
-  color: black;
-}
-#feed {
-  color: #fffcea;
 }

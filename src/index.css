@@ -57,5 +57,10 @@ button {
   padding-left: 10px;
   grid-row-start: 7;
   grid-column-start: 1;
-
+}
+input {
+  border-radius: 5px;
+  border: 1px solid black;
+  background: rgba(0,0,0,0.1);
+  color: white;
 }

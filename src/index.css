@@ -31,7 +31,7 @@ h2 {
   grid-auto-flow: column;
   grid-template-rows: repeat(auto-fit, 100px);
   grid-template-columns: repeat(auto-fit, 30%);
-  grid-row-end: 8
+  justify-content: space-evenly;
 }
 .chatz {
   background-color: #0d63a5;

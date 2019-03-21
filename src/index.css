@@ -16,13 +16,14 @@ h1 {
   font-size: 76px;
   text-align: center;
   grid-column-start: 2;
+  font-family: 'Over the Rainbow', cursive;
 }
 h2 {
   text-decoration: underline;
   grid-row-start: 3;
   text-align: center;
-  color: ivory;
-  text-shadow: 1px 1px #cdd5e0;
+  color: black;
+  font-family: 'Over the Rainbow', cursive;
 }
 .container {
   display: grid;

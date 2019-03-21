@@ -19,8 +19,6 @@ Christopher Cook
 
 <br />
 <br />
-<a href="http://68.132.86.66:3001/">React Front-End</a>
-
 
 
 

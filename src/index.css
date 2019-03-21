@@ -1,3 +1,15 @@
+header::after {
+  content: "";
+  opacity: 0.8;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right:0 ;
+  background-image: url('https://i.imgur.com/li71nSp.jpg');
+  position: absolute;
+  background-size: cover;
+  z-index: -1;
+}
 h1 {
   text-align: center
 }
@@ -18,10 +30,10 @@ h2 {
   /* border-radius: 20px; */
 }
 .chatLog {
-
+grid-row-start:1
 }
 .chatList {
-  grid-row-start: 2;
+  grid-row-start: 3;
 }
 button {
   margin-top: 10px;

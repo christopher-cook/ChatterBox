@@ -41,6 +41,7 @@ h2 {
   padding-bottom: 10px;
   padding-left: 10px;
   border-radius: 10px;
+  font-family: 'Just Me Again Down Here', cursive;
 }
 .chatLog {
 grid-row-start:1;

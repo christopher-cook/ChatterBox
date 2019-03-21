@@ -13,12 +13,13 @@ body::after {
 h1 {
   color: #001f3f;
   text-shadow: 2px 2px #4e709d;
-  font-size: 32px;
+  font-size: 76px;
   text-align: center;
   grid-column-start: 2;
 }
 h2 {
   text-decoration: underline;
+  grid-column-start: 4
 }
 .container {
   display: grid;
@@ -40,7 +41,7 @@ padding-bottom: 5px;
 margin-left: 15px;
 }
 .chatList {
-  grid-row-start: 3;
+  grid-row-start: 5;
 }
 button {
   margin-top: 10px;

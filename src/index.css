@@ -22,12 +22,13 @@ h2 {
   grid-template-columns: repeat(3, 30%);
 }
 .chatz {
+  background-color: gray;
   border: 1px solid green;
   max-width: 250px;
   max-height: 250px;
   padding-bottom: 20px;
   padding-left: 10px;
-  /* border-radius: 20px; */
+  border-radius: 20px;
 }
 .chatLog {
 grid-row-start:1

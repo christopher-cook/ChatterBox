@@ -52,6 +52,10 @@ margin-left: 15px;
 }
 button {
   margin-top: 10px;
+  border-radius: 4px;
+  height: 24px;
+  color: white;
+  background-color: black;
 }
 .formInput {
   padding-left: 10px;
@@ -66,5 +70,5 @@ input {
 }
 #name, #feed {
   color: navy;
-  padding: 2px;
+  padding: 4px;
 }

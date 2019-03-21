@@ -16,14 +16,14 @@ h1 {
   font-size: 76px;
   text-align: center;
   grid-column-start: 2;
-  font-family: 'Over the Rainbow', cursive;
+  font-family: 'The Girl Next Door', cursive;
 }
 h2 {
   text-decoration: underline;
   grid-row-start: 3;
   text-align: center;
   color: black;
-  font-family: 'Over the Rainbow', cursive;
+  font-family: 'The Girl Next Door', cursive;
 }
 .container {
   display: grid;

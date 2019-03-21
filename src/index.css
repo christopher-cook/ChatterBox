@@ -12,7 +12,10 @@ body::after {
 }
 h1 {
   color: #001f3f;
-  text-align: center
+  text-shadow: 2px 2px #4e709d;
+  font-size: 32px;
+  text-align: center;
+  grid-column-start: 2;
 }
 h2 {
   text-decoration: underline;
@@ -33,7 +36,8 @@ h2 {
 }
 .chatLog {
 grid-row-start:1;
-padding: 5px;
+padding-bottom: 5px;
+margin-left: 15px;
 }
 .chatList {
   grid-row-start: 3;
